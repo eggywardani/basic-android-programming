@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity {
-    private Button btnSave;
+    private Button btnSave, btnEdit, btnDelete;
     private EditText edtInputName, edtInputNim, edtInputJurusan, edtInputAlamat;
     private TextView resultName, resultNim, resultJurusan, resultAlamat;
 
@@ -27,6 +27,9 @@ public class AboutActivity extends AppCompatActivity {
         resultJurusan = (TextView) findViewById(R.id.result_jurusan);
         resultAlamat = (TextView) findViewById(R.id.result_alamat);
         btnSave = (Button)findViewById(R.id.btn_simpan);
+        btnEdit = (Button)findViewById(R.id.btn_edit);
+        btnDelete = (Button)findViewById(R.id.btn_hapus);
+
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override

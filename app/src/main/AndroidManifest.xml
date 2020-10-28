@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".AboutActivity"
             android:theme="@style/AppTheme.NoActionbar"/>
-        <activity android:name=".HelpActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".SettingActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

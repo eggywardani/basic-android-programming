@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         }else if (item.getItemId() == R.id.setting){
             startActivity(new Intent(this, SettingActivity.class));
         }else if (item.getItemId() == R.id.help){
-            startActivity(new Intent(this, HelpActivity.class));
+            startActivity(new Intent(this, ProfileActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

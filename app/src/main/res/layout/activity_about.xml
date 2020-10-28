@@ -114,6 +114,26 @@
                 android:text="Simpan"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+            <Button
+                android:id="@+id/btn_hapus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button"
+                android:text="Hapus"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+
 
         </LinearLayout>
 
