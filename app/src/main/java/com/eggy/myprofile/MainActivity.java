@@ -1,37 +1,68 @@
 package com.eggy.myprofile;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
+    LinearLayout linProfile, linInput, linInfo, linExit;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        linProfile = (LinearLayout) findViewById(R.id.ll_profile);
+        linInput = (LinearLayout) findViewById(R.id.ll_input);
+        linInfo = (LinearLayout) findViewById(R.id.ll_info);
+        linExit = (LinearLayout) findViewById(R.id.ll_exit);
+
+
+        linProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentProfile = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intentProfile);
+            }
+        });
+
+        linInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentInput = new Intent(MainActivity.this, InputDataActivity.class);
+                startActivity(intentInput);
+            }
+        });
+        linInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentInfo = new Intent(MainActivity.this, InfoActivity.class);
+                startActivity(intentInfo);
+            }
+        });
+
+        linExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+
+
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_options, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.about){
-            startActivity(new Intent(this, AboutActivity.class));
-        }else if (item.getItemId() == R.id.setting){
-            startActivity(new Intent(this, SettingActivity.class));
-        }else if (item.getItemId() == R.id.help){
-            startActivity(new Intent(this, ProfileActivity.class));
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
 
