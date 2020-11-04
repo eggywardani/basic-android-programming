@@ -41,6 +41,14 @@ public class InputDataActivity extends AppCompatActivity {
                  jurusan = edtInputJurusan.getText().toString().trim();
                  alamat = edtInputAlamat.getText().toString().trim();
 
+                if (resultNim.getText().toString().matches("") && resultName.getText().toString().matches("") && resultJurusan.getText().toString().matches("") && resultAlamat.getText().toString().matches("")){
+                    btnSave.setText("Simpan");
+                    Toasty.success(getApplicationContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT, false).show();
+                }else {
+                    btnSave.setText("Edit");
+                    Toasty.success(getApplicationContext(), "Data berhasil diubah", Toast.LENGTH_SHORT, false).show();
+                }
+                btnSave.setText("Edit");
 
                 resultNim.setText(nim);
                 resultName.setText(nama);
@@ -48,16 +56,7 @@ public class InputDataActivity extends AppCompatActivity {
                 resultAlamat.setText(alamat);
 
 
-                if (!nim.isEmpty() && !nama.isEmpty() && !jurusan.isEmpty() && !alamat.isEmpty()){
-                    btnSave.setText("Simpan");
-                    Toasty.success(getApplicationContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT, false).show();
-                }else if (resultNim.getText().toString().matches("") && resultName.getText().toString().matches("") && resultJurusan.getText().toString().matches("") && resultAlamat.getText().toString().matches("")){
-                    btnSave.setText("Simpan");
-                    Toasty.success(getApplicationContext(), "Data berhasil disimpan", Toast.LENGTH_SHORT, false).show();
-                }else {
-                    btnSave.setText("Edit");
-                    Toasty.success(getApplicationContext(), "Data berhasil diubah", Toast.LENGTH_SHORT, false).show();
-                }
+
 
             }
         });
